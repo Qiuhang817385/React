@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- we can render this JSX directly to the HTML DOM using React's rendering API known as ReactDOM.
+        直接渲染JSX到html的 dom,利用reactDom API
+
+        ReactDOM offers a simple method to render React elements to the DOM which looks like this: ReactDOM.render
+        (componentToRender, targetNode)
+        
+        the first argument:the React element or component that you want to render,
+        the second argument:the DOM node that you want to render the component to.
+        ReactDOM.render(JSX, document.getElementById('root')).
+
+        ReactDOM.render() must be called after the JSX element declarations
+        必须被调用在JSX声明之后
+        just like how you must declare variables before using them.
+        
+    -->
+    <script>
+        const JSX = (
+            <div>
+                <h1>Hello World</h1>
+                <p>Lets render this to the DOM</p>
+            </div>
+        );
+// change code below this line
+ReactDOM.render(JSX,document.getElementById("challenge-node"))
+    </script>
+</body>
+</html>
