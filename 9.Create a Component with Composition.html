@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Imagine you are building an App and have created three components
+    Navbar, Dashboard, and Footer
+
+    To compose these components together, you could create an App parent component which renders each of these three
+    components as children.
+    创建一个app父组件
+
+    for example
+    return (
+    <App>
+        <Navbar />
+        <Dashboard />
+        <Footer />
+    </App>
+    )
+
+    When React encounters a custom HTML tag that references another component
+    react遇见一个闭合组件的时候
+    a component name wrapped in
+    < /> like in this example),
+
+    it renders the markup for that component in the location of the tag
+    它在标记的位置呈现该组件的标记
+
+
+    ChildComponent is defined with an ES6 arrow function
+
+组件其实就是一个函数而已
+    const ChildComponent = () => {
+    return (
+    <div>
+        <p>I am the child</p>
+    </div>
+    );
+    };
+
+    class里面写的其实也只是一个函数而已
+    
+    class ParentComponent extends React.Component {
+    constructor(props) {
+    super(props);
+    }
+    render() {
+    return (
+    <div>
+        <h1>I am the parent</h1>
+        { /* change code below this line */ }
+
+        <ChildComponent />
+        { /* change code above this line */ }
+    </div>
+    );
+    }
+    };
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    The other way to define a React component is with the ES6 class syntax. 
+    创建react组件的唯一方式就是使用ES6的类
+    Kitten extends React.Component:
+
+    class Kitten extends React.Component{
+        constructor(props){
+            super(props);
+        }
+        render:function(){
+            return (
+                <h1>Hi</h1>
+            )
+        }
+    }
+
+
+    This creates an ES6 class Kitten which extends the React.Component class
+    So the Kitten class now has access to many useful React features
+    现在kitten有了很多React有用的特性
+    比如 local state and lifecycle hooks
+    本地状态?和生命周期
+    Don't worry if you aren't familiar with these terms yet
+    别担心还没有熟悉这些条款
+
+
+    Also notice the Kitten class has a constructor defined within it that calls super()
+
+    构造函数,并且有一个super()
+
+    It uses super() to call the constructor of the parent class,
+    它使用super()调用父类的构造函数，
+    也就是super可以调用父类的构造函数
+
+    The constructor is a special method used during the initialization of objects that are created with the class keyword.
+
+    构造函数是      使用class关键字创建   对象初始化期间使用的  一个特殊的方法
+
+    构造函数是使用class关键字创建的对象初始化期间使用的特殊方法。
+
+
+    It is best practice to call a component's constructor with super, and pass props to both.
+    最佳实践是使用super调用组件的构造函数，并且同时可以传递属性值。
+
+    initialized properly.
+    正确初始化
+
+    the constructor as well as props
+    构造函数和props
+</body>
+</html>
