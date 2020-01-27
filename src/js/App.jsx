@@ -16,16 +16,19 @@ class App extends React.Component {
   handleKeyUp (e) {
     let val = e.target.value;
     this.setState({
-      message: val.trim()
+      // message: val.trim()
+      // 获取dom元素的值
+      message: this.refs.myInput.value.trim()
     })
   }
   render () {
     return (
       <div>
-        <input type="text" onChange={this.handleKeyUp} />
+        <input ref="myInput" type="text" onChange={this.handleKeyUp} />
         <p>
           {this.state.message}
         </p>
+
       </div>
     )
   }

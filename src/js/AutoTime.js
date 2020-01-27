@@ -47,7 +47,7 @@ export default class AutoTime extends Component {
     return (
       <div>
         {/* 时:{this.props.hours}分:{this.props.minutes}秒:{this.props.sec} */}
-        时:{hours}分:{minutes}秒:{sec}
+        时:{hours}分:{minutes}秒:{sec <= 9 ? '0' + sec : sec}
       </div>
     )
   }

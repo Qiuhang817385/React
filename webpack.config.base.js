@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 //exports模块对外输出的接口
 const webpack = require('webpack');
 
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   //entry:入口文件配置项，指定模块加载的入口模块    
@@ -25,10 +26,15 @@ module.exports = {
       template: "./src/index.html"
     }),
     new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
       React: 'react',
       ReactDOM: 'react-dom'
-    })
-
+    }),
+    new CopyWebpackPlugin([{
+      from: __dirname + '/src/js/components/mock',
+      to: __dirname + "/dist/mock"
+    }]),
     // ,
     // new CleanWebpackPlugin(['dist'])
   ],

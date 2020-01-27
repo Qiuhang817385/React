@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Link from './link';
+// import Link from './link';
+import App from './components/App'
 // import './../css/style.scss';
 ReactDom.render(
-  <Link />,
+  <App />,
   document.getElementById('div1')
 )

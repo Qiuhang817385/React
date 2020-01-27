@@ -235,3 +235,13 @@ proptypes
 ## prop-types可以进行组件通信
 
 ![image-20200127162527720](C:\Users\Artificial\AppData\Roaming\Typora\typora-user-images\image-20200127162527720.png)
+
+## 获取dom的方式
+
+![image-20200127170224275](C:\Users\Artificial\AppData\Roaming\Typora\typora-user-images\image-20200127170224275.png)
+
+方式1
+
+方式2
+
+e.target事件对象来获取dom里面的值
