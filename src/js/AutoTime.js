@@ -33,9 +33,13 @@ export default class AutoTime extends Component {
     // setInterval原本默认的this是window,现在可以改成了这个组件的this
 
 
-    setInterval(function () {
-      this.showTime();
-    }.bind(this), 1000);
+    // setInterval(function () {
+    //   this.showTime();
+    // }.bind(this), 1000);
+    // 使用es6的写法
+    setInterval(() => {
+      this.showTime()
+    }, 1000);
   }
 
   render () {
