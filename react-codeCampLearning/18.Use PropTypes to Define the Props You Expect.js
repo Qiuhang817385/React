@@ -65,28 +65,27 @@ checking features to verify that components receive props of the correct type
     import PropTypes from 'prop-types';
   */
 
-  // 注意这里的话不需要加s
+// 注意这里的话不需要加s
+import PropTypes from 'prop-types';
+const Items = (props) => {
+  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+};
 
- const Items = (props) => {
-    return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
-  };
-  
-  // change code below this line
-  Items.propTypes = {
-    quantity:PropTypes.number.isRequired
+// change code below this line
+Items.propTypes = {
+  quantity: PropTypes.number.isRequired
+}
+// change code above this line
+
+Items.defaultProps = {
+  quantity: 0
+};
+
+class ShoppingCart extends React.Component {
+  constructor(props) {
+    super(props);
   }
-  // change code above this line
-  
-  Items.defaultProps = {
-    quantity: 0
-  };
-  
-  class ShoppingCart extends React.Component {
-    constructor(props) {
-      super(props);
-    }
-    render() {
-      return <Items />
-    }
-  };
-  
+  render () {
+    return <Items />
+  }
+};

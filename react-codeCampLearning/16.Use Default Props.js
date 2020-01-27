@@ -25,6 +25,12 @@ const ShoppingCart = props => {
 };
 // change code below this line
 
+//就是es5的getDefaultProps
+//就是es5的getDefaultProps
+//就是es5的getDefaultProps
+//就是es5的getDefaultProps
+//就是es5的getDefaultProps
+//就是es5的getDefaultProps
 ShoppingCart.defaultProps = {
   items: 0
 };
