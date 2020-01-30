@@ -1,0 +1,10 @@
+{
+  "presets": [
+    // 支持最新的react语法
+    "env",
+    "react"
+  ],
+  "plugins": [
+    "transform-object-rest-spread"
+  ]
+}

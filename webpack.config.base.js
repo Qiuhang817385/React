@@ -46,10 +46,10 @@ module.exports = {
       test: /\.jsx?$/,//表示要编译的文件的类型，这里要编译的是js文件
       loader: 'babel-loader',//装载的哪些模块
       exclude: /node_modules/,//标识不编译node_modules文件夹下面的内容
-      query: {//具体的编译的类型，
-        compact: false,//表示不压缩
-        presets: ['es2015', 'react']//我们需要编译的是react
-      }
+      // query: {//具体的编译的类型，
+      //   compact: false,//表示不压缩
+      //   presets: ['es2015', 'react']//我们需要编译的是react
+      // }
     }
       // ,
       // {

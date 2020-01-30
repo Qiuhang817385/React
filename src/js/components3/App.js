@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import BaseRouter from '../routes/BaseRouter'
+import BaseRouter from '../routes2/BaseRouter'
 export default class App extends Component {
   render () {
     return (
