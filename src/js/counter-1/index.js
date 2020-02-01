@@ -73,6 +73,7 @@ const mapStateToProps = (state, ownProps) => {
     num: state.costoms.num,
     num2: state.users.number,
     data: state.users.dataRes
+
   }
 }
 
