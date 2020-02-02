@@ -4,20 +4,17 @@ import axios from 'axios'
 class AppRedux extends Component {
   constructor() {
     super();
-    // this.handdleClickAdd = this.handdleClickAdd.bind(this);
-    // this.handdleClickSub = this.handdleClickSub.bind(this);
-    // this.handdleClickAjax = this.handdleClickAjax.bind(this);
   }
 
   render () {
-    console.log("props", this.props);
-    const { num, num2, data } = this.props;
+    console.log("this.props", this.props);
+    const { num, number, data } = this.props;
     console.log(num);
     return (
       <div>
         num1:{num}
         <br />
-        num2:{num2}
+        number:{number}
         <br />
         <button onClick={this.props.handdleClickAjax}>获取数据</button>
         <br />
@@ -42,12 +39,6 @@ const mapDispatchToProps = (dispatch) => {
       }
       dispatch(action1)
     },
-    handdleClickSub: () => {
-      const action2 = {
-        type: "SUB2"
-      }
-      dispatch(action2)
-    },
     handdleClickAjax () {
       axios.get("http://www.qiuhang.club:7300/mock/5e1c648a059ebf2c630e5369/example/text")
         .then((res) => {
@@ -62,18 +53,30 @@ const mapDispatchToProps = (dispatch) => {
         .catch((e) => {
           console.log(e.message());
         })
+    },
+    handdleClickSub: () => {
+
+      const action = {
+        type: "SUBUSER"
+      }
+      console.log("handdleClickSubaction", action);
+
+      dispatch(action)
     }
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("mapStateToProps", state);
-  console.log("state.users.num2", state.users);
+  console.log("mapStateToProps-state", state);
+  console.log("state.users.number", state.users.number);
+  // 执行完毕之后,reducer方面并没有返回dataRes,所以是undefined状态,如果reducer返回不同的数据,那么就需要加以判断
+  // 执行完毕之后,reducer方面并没有返回dataRes,所以是undefined状态,如果reducer返回不同的数据,那么就需要加以判断
+  // 执行完毕之后,reducer方面并没有返回dataRes,所以是undefined状态,如果reducer返回不同的数据,那么就需要加以判断
+  // 执行完毕之后,reducer方面并没有返回dataRes,所以是undefined状态,如果reducer返回不同的数据,那么就需要加以判断
   return {
     num: state.costoms.num,
-    num2: state.users.number,
-    data: state.users.dataRes
-
+    number: state.users.number ? state.users.number : 0,
+    data: state.users.dataRes ? state.users.dataRes : []
   }
 }
 

@@ -1,4 +1,4 @@
-reducer<img src="C:\Users\Artificial\AppData\Roaming\Typora\typora-user-images\image-20200130003430060.png" alt="image-20200130003430060" style="zoom:50%;" />
+ reducer<img src="C:\Users\Artificial\AppData\Roaming\Typora\typora-user-images\image-20200130003430060.png" alt="image-20200130003430060" style="zoom:50%;" />
 
 <img src="C:\Users\Artificial\AppData\Roaming\Typora\typora-user-images\image-20200130004200143.png" alt="image-20200130004200143" style="zoom: 33%;" />![image-20200130004327568](C:\Users\Artificial\AppData\Roaming\Typora\typora-user-images\image-20200130004327568.png)
 
@@ -26,7 +26,11 @@ reducer返回的原理
 
 ![image-20200130200636945](C:\Users\Artificial\AppData\Roaming\Typora\typora-user-images\image-20200130200636945.png)
 
+
+
 <img src="C:\Users\Artificial\AppData\Roaming\Typora\typora-user-images\image-20200130200722386.png" alt="image-20200130200722386" />
+
+上下两种写法效果一致
 
 <img src="C:\Users\Artificial\AppData\Roaming\Typora\typora-user-images\image-20200130200801103.png" alt="image-20200130200801103" style="zoom:50%;" />
 
