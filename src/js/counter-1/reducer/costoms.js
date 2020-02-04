@@ -1,5 +1,8 @@
 const defaultState = {
-  num: 0
+  num: 0,
+  isLoading: false,
+  error: null,
+  user: {}
 }
 export const costoms = (state = defaultState, action) => {
   console.log(action);
